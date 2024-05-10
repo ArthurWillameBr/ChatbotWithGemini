@@ -21,8 +21,8 @@ const Chat = () => {
   });
 
   return (
-    <Card className="w-full text-center  text-slate-50 bg-transparent border-none lg:w-[32rem] lg:bg-neutral-700 md:bg-neutral-700 lg:border lg:shadow-2xl md:max-w-[26rem] md:border md:shadow-2xl">
-      <CardHeader className="">
+    <Card className="w-full  text-slate-50 bg-transparent border-none lg:w-[32rem] lg:bg-neutral-700 md:bg-neutral-700 lg:border lg:shadow-2xl md:max-w-[26rem] md:border md:shadow-2xl">
+      <CardHeader className="text-center ">
         <CardTitle>Chat AI</CardTitle>
         <CardDescription className="text-slate-100">
           Chatbot feito com Gemini e Nextjs
