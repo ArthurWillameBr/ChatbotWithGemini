@@ -21,7 +21,7 @@ const Chat = () => {
   });
 
   return (
-    <Card className="w-full text-slate-50 bg-neutral-700 border-none lg:w-[32rem] lg:border lg:shadow-2xl md:max-w-[26rem]">
+    <Card className="w-full text-slate-50 bg-transparent border-none lg:w-[32rem] lg:bg-neutral-700 md:bg-neutral-700 lg:border lg:shadow-2xl md:max-w-[26rem] md:border md:shadow-2xl">
       <CardHeader>
         <CardTitle>Chat AI</CardTitle>
         <CardDescription className="text-slate-100">
@@ -30,7 +30,7 @@ const Chat = () => {
       </CardHeader>
       <CardContent>
         {messages.length === 0 ? (
-          <div className="flex flex-col gap-2 items-center justify-center h-[74vh] space-y-5 md:max-h-[64vh]">
+          <div className="flex flex-col gap-2 items-center justify-center h-[60vh] space-y-5 md:max-h-[64vh]">
             <Avatar>
               <AvatarFallback>RS</AvatarFallback>
               <AvatarImage src="https://github.com/GAwesomeBot.png" />
@@ -38,7 +38,7 @@ const Chat = () => {
             <p>Como posso ajudá-lo hoje?</p>
           </div>
         ) : (
-          <ScrollArea className="h-[74vh] space-y-5 overflow-y-hidden md:max-h-[64vh] ">
+          <ScrollArea className="h-[60vh]  space-y-5 overflow-y-hidden md:max-h-[64vh] ">
             {messages.map((message) => {
               return (
                 <div
@@ -69,7 +69,7 @@ const Chat = () => {
           </ScrollArea>
         )}
       </CardContent>
-      <CardFooter>
+      <CardFooter className="pb-0 md:pb-6">
         <form
           className="w-full flex gap-2 items-center "
           onSubmit={handleSubmit}
