@@ -21,14 +21,14 @@ const Chat = () => {
   });
 
   return (
-    <Card className="w-full text-center text-slate-50 bg-transparent border-none lg:w-[32rem] lg:bg-neutral-700 md:bg-neutral-700 lg:border lg:shadow-2xl md:max-w-[26rem] md:border md:shadow-2xl">
+    <Card className="w-full text-center  text-slate-50 bg-transparent border-none lg:w-[32rem] lg:bg-neutral-700 md:bg-neutral-700 lg:border lg:shadow-2xl md:max-w-[26rem] md:border md:shadow-2xl">
       <CardHeader className="">
         <CardTitle>Chat AI</CardTitle>
         <CardDescription className="text-slate-100">
           Chatbot feito com Gemini e Nextjs
         </CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="h-[77vh]">
         {messages.length === 0 ? (
           <div className="flex flex-col gap-2 items-center justify-center h-[60vh] space-y-5 md:max-h-[64vh]">
             <Avatar>
