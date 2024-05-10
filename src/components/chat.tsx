@@ -21,8 +21,8 @@ const Chat = () => {
   });
 
   return (
-    <Card className="w-full text-slate-50 bg-transparent border-none lg:w-[32rem] lg:bg-neutral-700 md:bg-neutral-700 lg:border lg:shadow-2xl md:max-w-[26rem] md:border md:shadow-2xl">
-      <CardHeader>
+    <Card className="w-full text-center text-slate-50 bg-transparent border-none lg:w-[32rem] lg:bg-neutral-700 md:bg-neutral-700 lg:border lg:shadow-2xl md:max-w-[26rem] md:border md:shadow-2xl">
+      <CardHeader className="">
         <CardTitle>Chat AI</CardTitle>
         <CardDescription className="text-slate-100">
           Chatbot feito com Gemini e Nextjs
@@ -69,9 +69,9 @@ const Chat = () => {
           </ScrollArea>
         )}
       </CardContent>
-      <CardFooter className="pb-0 md:pb-6">
+      <CardFooter>
         <form
-          className="w-full flex gap-2 items-center "
+          className="w-full flex gap-2 items-center  "
           onSubmit={handleSubmit}
         >
           <Input
