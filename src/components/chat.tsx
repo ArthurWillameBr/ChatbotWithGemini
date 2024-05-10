@@ -48,7 +48,7 @@ const Chat = () => {
                   {message.role === "user" && (
                     <Avatar>
                       <AvatarFallback>AW</AvatarFallback>
-                      <AvatarImage  className="size-10" src="https://github.com/ArthurWillameBr.png" />
+                      <AvatarImage  className="size-10" src="https://github.com/Cat7373.png" />
                     </Avatar>
                   )}
                   {message.role === "assistant" && (
