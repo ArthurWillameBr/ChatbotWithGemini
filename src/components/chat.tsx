@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import {
@@ -13,6 +13,7 @@ import { useChat } from "ai/react";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { ScrollArea } from "./ui/scroll-area";
+import Image from "next/image";
 
 const Chat = () => {
   const { messages, input, handleInputChange, handleSubmit } = useChat({
@@ -20,47 +21,66 @@ const Chat = () => {
   });
 
   return (
-    <Card className="w-[540px]">
+    <Card className="w-full text-slate-50 bg-neutral-700 border-none lg:w-[32rem] lg:border lg:shadow-2xl md:max-w-[26rem]">
       <CardHeader>
         <CardTitle>Chat AI</CardTitle>
-        <CardDescription>Chatbot feito com Gemini e Nextjs</CardDescription>
+        <CardDescription className="text-slate-100">
+          Chatbot feito com Gemini e Nextjs
+        </CardDescription>
       </CardHeader>
       <CardContent>
-        <ScrollArea className="h-[600px] w-full space-y-5 ">
-        {messages.map((message) => {
-          return (
-            <div key={message.id} className="flex gap-4 mb-2 text-slate-600 text-sm">
-              {message.role === "user" && (
-                <Avatar>
-                  <AvatarFallback>AW</AvatarFallback>
-                  <AvatarImage src="https://github.com/ArthurWillameBr.png" />
-                </Avatar>
-              )}
-              {message.role === "assistant" && (
-                <Avatar>
-                  <AvatarFallback>RS</AvatarFallback>
-                  <AvatarImage src="https://github.com/GAwesomeBot.png" />
-                </Avatar>
-              )}
-              <p className="leading-relaxed mb-2 mr-2">
-                <span className="block font-bold text-slate-700">
-                  {message.role === "user" ? "Usuário" : "AI"}
-                </span>
-                {message.content}
-              </p>
-            </div>
-          );
-        })}
-        </ScrollArea>
+        {messages.length === 0 ? (
+          <div className="flex flex-col gap-2 items-center justify-center h-[74vh] space-y-5 md:max-h-[64vh]">
+            <Avatar>
+              <AvatarFallback>RS</AvatarFallback>
+              <AvatarImage src="https://github.com/GAwesomeBot.png" />
+            </Avatar>
+            <p>Como posso ajudá-lo hoje?</p>
+          </div>
+        ) : (
+          <ScrollArea className="h-[74vh] space-y-5 overflow-y-hidden md:max-h-[64vh] ">
+            {messages.map((message) => {
+              return (
+                <div
+                  key={message.id}
+                  className="flex gap-3 mb-2 text-slate-50 text-sm"
+                >
+                  {message.role === "user" && (
+                    <Avatar>
+                      <AvatarFallback>AW</AvatarFallback>
+                      <AvatarImage  className="size-10" src="https://github.com/ArthurWillameBr.png" />
+                    </Avatar>
+                  )}
+                  {message.role === "assistant" && (
+                    <Avatar>
+                      <AvatarFallback>RS</AvatarFallback>
+                      <AvatarImage src="https://github.com/GAwesomeBot.png" />
+                    </Avatar>
+                  )}
+                  <p className="leading-relaxed mb-4 mr-3">
+                    <span className="block font-bold text-slate-50">
+                      {message.role === "user" ? "Usuário" : "AI"}
+                    </span>
+                    {message.content}
+                  </p>
+                </div>
+              );
+            })}
+          </ScrollArea>
+        )}
       </CardContent>
       <CardFooter>
-        <form className=" w-full flex gap-2 items-center " onSubmit={handleSubmit}>
+        <form
+          className="w-full flex gap-2 items-center "
+          onSubmit={handleSubmit}
+        >
           <Input
-            placeholder="O que eu posso de ajudar?"
+            placeholder="Pergunte ao chatbot"
+            className="text-black"
             value={input}
             onChange={handleInputChange}
           />
-          <Button type="submit" >Send</Button>
+          <Button type="submit">Enviar</Button>
         </form>
       </CardFooter>
     </Card>
