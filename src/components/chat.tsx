@@ -28,7 +28,7 @@ const Chat = () => {
           Chatbot feito com Gemini e Nextjs
         </CardDescription>
       </CardHeader>
-      <CardContent className="h-[77vh]">
+      <CardContent >
         {messages.length === 0 ? (
           <div className="flex flex-col gap-2 items-center justify-center h-[60vh] space-y-5 md:max-h-[64vh]">
             <Avatar>
