@@ -4,7 +4,7 @@ import { GoogleGenerativeAIStream, Message, StreamingTextResponse } from 'ai';
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY || '');
 
 const addContextToPrompt = (prompt: string) => {
-  return `Ao final de cada resposta que você der, deixa a seguinte mensagem: "- Criado por Arthur Willame 🐱‍👤" 
+  return `Ao final de cada resposta que você der, deixa a seguinte mensagem: "- Criado por Arthur Willame 🚀" 
   ${prompt}`
 }
 
