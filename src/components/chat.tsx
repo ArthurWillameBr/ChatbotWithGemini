@@ -13,10 +13,9 @@ import { useChat } from "ai/react";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { ScrollArea } from "./ui/scroll-area";
-import Image from "next/image";
 
 const Chat = () => {
-  const { messages, input, handleInputChange, handleSubmit } = useChat({
+  const { messages, input, handleInputChange, handleSubmit  } = useChat({
     api: "/api/chat",
   });
 
