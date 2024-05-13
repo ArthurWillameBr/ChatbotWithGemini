@@ -10,9 +10,9 @@ Next.js - Tailwindcss - Gemini API
 
 ### 💻 Como rodar o projeto?
 
-Após clonar o repositório
-Obtenha sua chave da api em: https://aistudio.google.com/app/apikey
-Após obter a chave, crie um arquivo .env na raiz do projeto e adicione: GOOGLE_API_KEY="SUA CHAVE DA API"
+Clone o repositório  
+Obtenha sua chave da api em: https://aistudio.google.com/app/apikey  
+Após obter a chave, crie um arquivo .env na raiz do projeto e adicione: GOOGLE_API_KEY="SUA CHAVE DA API"  
 Depois execulte os comando abaixo:
 ```bash
 npm install
