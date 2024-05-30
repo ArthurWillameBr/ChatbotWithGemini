@@ -13,6 +13,7 @@ import { useChat } from "ai/react";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { ScrollArea } from "./ui/scroll-area";
+import {Github} from "lucide-react"
 
 const Chat = () => {
   const { messages, input, handleInputChange, handleSubmit  } = useChat({
@@ -21,9 +22,15 @@ const Chat = () => {
 
   return (
     <Card className="w-full  text-slate-50 bg-transparent border-none lg:w-[32rem] lg:bg-neutral-700 md:bg-neutral-700 lg:border lg:shadow-2xl md:max-w-[26rem] md:border md:shadow-2xl">
-      <CardHeader className="text-center ">
-        <CardTitle>Chat AI</CardTitle>
-        <CardDescription className="text-slate-100">
+      <CardHeader className="relative ">
+          <CardTitle className="text-center">Chat AI
+          <div className="absolute right-1 top-6 pr-2">
+            <a href="https://github.com/ArthurWillameBr/ChatbotWithGemini" target="_blank">
+              <Github/>
+            </a>
+          </div>
+          </CardTitle>
+        <CardDescription className="text-center text-slate-100">
           Chatbot feito com Gemini e Nextjs
         </CardDescription>
       </CardHeader>
