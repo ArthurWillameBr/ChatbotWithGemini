@@ -6,7 +6,7 @@ Tire suas dúvidas com o gemini
 ![image](https://github.com/ArthurWillameBr/ChatbotWithGemini/assets/163607700/7eb3247f-640a-4103-a647-23852833f6f2)
 
 ### 👨‍💻 Principais tecnologias
-Next.js - Tailwindcss - Gemini API
+Next.js - Tailwindcss - Gemini API - vercel SDK
 
 ### 💻 Como rodar o projeto?
 
