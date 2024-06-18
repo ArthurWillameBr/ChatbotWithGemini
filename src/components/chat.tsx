@@ -16,9 +16,7 @@ import { ScrollArea } from "./ui/scroll-area";
 import {Github} from "lucide-react"
 
 const Chat = () => {
-  const { messages, input, handleInputChange, handleSubmit  } = useChat({
-    api: "/api/chat",
-  });
+  const { messages, input, handleInputChange, handleSubmit  } = useChat({});
 
   return (
     <Card className="w-full  text-slate-50 bg-transparent border-none lg:w-[32rem] lg:bg-neutral-700 md:bg-neutral-700 lg:border lg:shadow-2xl md:max-w-[26rem] md:border md:shadow-2xl">
@@ -31,7 +29,7 @@ const Chat = () => {
           </div>
           </CardTitle>
         <CardDescription className="text-center text-slate-100">
-          Chatbot feito com Gemini e Nextjs
+          Chatbot feito com Gemini
         </CardDescription>
       </CardHeader>
       <CardContent >
